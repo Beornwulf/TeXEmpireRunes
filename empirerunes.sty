@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{empirerunes}[2014/02/08 v1.0 Empire LARP Runes package]
+\ProvidesFile{Wintermark-Regular.ttf}
+
+\RequirePackage{fontspec}
+
+\IfFileExists{Wintermark-Regulars.ttf}{}{
+    \PackageError{empirerunes}{%
+        Cannot find Wintermark-Regular.ttf
+    }{%
+        Ensure the font file is in the same directory as the empirerunes package
+    }
+}
+
+\relax
+
+% Individual commands for each rune.
+\newcommand{\aesh}[0]{{ \fontspec{Wintermark-Regular.ttf}A}}
+\newcommand{\bravash}[0]{{ \fontspec{Wintermark-Regular.ttf}B}}
+\newcommand{\cavul}[0]{{ \fontspec{Wintermark-Regular.ttf}C}}
+\newcommand{\diras}[0]{{ \fontspec{Wintermark-Regular.ttf}D}}
+\newcommand{\evrom}[0]{{ \fontspec{Wintermark-Regular.ttf}E}}
+\newcommand{\feresh}[0]{{ \fontspec{Wintermark-Regular.ttf}F}}
+\newcommand{\gralm}[0]{{ \fontspec{Wintermark-Regular.ttf}G}}
+\newcommand{\hirmok}[0]{{ \fontspec{Wintermark-Regular.ttf}H}}
+\newcommand{\irremais}[0]{{ \fontspec{Wintermark-Regular.ttf}I}}
+\newcommand{\jotra}[0]{{ \fontspec{Wintermark-Regular.ttf}J}}
+\newcommand{\kyrop}[0]{{ \fontspec{Wintermark-Regular.ttf}K}}
+\newcommand{\lann}[0]{{ \fontspec{Wintermark-Regular.ttf}L}}
+\newcommand{\mawrig}[0]{{ \fontspec{Wintermark-Regular.ttf}M}}
+\newcommand{\naeve}[0]{{ \fontspec{Wintermark-Regular.ttf}N}}
+\newcommand{\ophis}[0]{{ \fontspec{Wintermark-Regular.ttf}O}}
+\newcommand{\pallas}[0]{{ \fontspec{Wintermark-Regular.ttf}P}}
+\newcommand{\queros}[0]{{ \fontspec{Wintermark-Regular.ttf}Q}}
+\newcommand{\rhyv}[0]{{ \fontspec{Wintermark-Regular.ttf}R}}
+\newcommand{\sular}[0]{{ \fontspec{Wintermark-Regular.ttf}S}}
+\newcommand{\tykonus}[0]{{ \fontspec{Wintermark-Regular.ttf}T}}
+\newcommand{\ull}[0]{{ \fontspec{Wintermark-Regular.ttf}U}}
+\newcommand{\verys}[0]{{ \fontspec{Wintermark-Regular.ttf}V}}
+\newcommand{\wyr}[0]{{ \fontspec{Wintermark-Regular.ttf}W}}
+\newcommand{\xun}[0]{{ \fontspec{Wintermark-Regular.ttf}X}}
+\newcommand{\yoorn}[0]{{ \fontspec{Wintermark-Regular.ttf}Y}}
+\newcommand{\zorech}[0]{{ \fontspec{Wintermark-Regular.ttf}Z}}
+
+% Generic \rune{} command accepting either upper or lower case input
+\newcommand{\rune}[1]{{ \fontspec{Wintermark-Regular.ttf}\uppercase{#1}}}
+
+\endinput
